@@ -1,64 +1,182 @@
-<Html>  
-<head>   
-<title>  
-Registration Page  
-</title>  
-</head>  
-<body bgcolor="Lightskyblue">  
-<br>  
-<br>  
-<form>  
-  
-<label> Firstname </label>         
-<input type="text" name="firstname" size="15"/> <br> <br>  
-<label> Middlename: </label>     
-<input type="text" name="middlename" size="15"/> <br> <br>  
-<label> Lastname: </label>         
-<input type="text" name="lastname" size="15"/> <br> <br>  
-  
-<label>   
-Course :  
-</label>   
-<select>  
-<option value="Course">Course</option>  
-<option value="BCA">BCA</option>  
-<option value="BBA">BBA</option>  
-<option value="B.Tech">B.Tech</option>  
-<option value="MBA">MBA</option>  
-<option value="MCA">MCA</option>  
-<option value="M.Tech">M.Tech</option>  
-</select>  
-  
-<br>  
-<br>  
-<label>   
-Gender :  
-</label><br>  
-<input type="radio" name="male"/> Male <br>  
-<input type="radio" name="female"/> Female <br>  
-<input type="radio" name="other"/> Other  
-<br>  
-<br>  
-  
-<label>   
-Phone :  
-</label>  
-<input type="text" name="country code"  value="+91" size="2"/>   
-<input type="text" name="phone" size="10"/> <br> <br>  
-Address  
-<br>  
-<textarea cols="80" rows="5" value="address">  
-</textarea>  
-<br> <br>  
-Email:  
-<input type="email" id="email" name="email"/> <br>    
-<br> <br>  
-Password:  
-<input type="Password" id="pass" name="pass"> <br>   
-<br> <br>  
-Re-type password:  
-<input type="Password" id="repass" name="repass"> <br> <br>  
-<input type="button" value="Submit"/>  
-</form>  
-</body>  
-</html>  
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegetable Market</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: aqua;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .container {
+            width: 100%;
+            margin: 10px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2 {
+            color: #4CAF50;
+        }
+
+        p {
+            color: #333;
+        }
+
+        .vegetable-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .vegetable-list li {
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+
+
+
+
+
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .button,.button1 {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 15px;
+            margin: 10px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            width: 150px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+        .parent-container {
+            flex: 1;
+            display: flex;
+        }
+
+        .child-container {
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+
+        .child-container:first-child {
+            flex: 1;
+        }
+
+        .child-container:last-child {
+            flex: 9;
+        }
+        
+
+        .profile-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+    </style>
+
+
+
+
+
+
+</head>
+
+<body>
+
+    <header>
+        <h1>HarishRoyal</h1>
+        <img src="profile.jpeg" alt="Profile Image" class="profile-image">
+
+    </header>
+
+
+
+
+
+
+
+    <div class="parent-container">
+        <div class="child-container">
+            <div class="button-container">
+                <a href="#" class="button">Home</a>
+                <a href="Profile.html" class="button">Profile</a>
+                <a href="contact1.html" class="button">Contact</a>
+                <a href="res_img.png" class="button">Resume</a>
+             <button class="button1" id="explore" onclick="expl()">Explore</button>
+            </div>
+        </div>
+        <div class="container" id="con">
+            <h2>Welcome to Our Vegetable Market</h2>
+            <p>Discover a wide variety of fresh and locally sourced vegetables at our market. We take pride in offering
+                quality produce to our customers.</p>
+
+            <h2>Featured Vegetables</h2>
+            <ul class="vegetable-list">
+                <li>Tomatoes</li>
+                <li>Carrots</li>
+                <li>Spinach</li>
+                <li>Bell Peppers</li>
+                <li>Broccoli</li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        expl(){
+            document.getElementById("con")="<h1>hello Harish</h1>"
+        }
+
+    </script>
+
+</body>
+
+</html>
